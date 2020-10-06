@@ -1,0 +1,12 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.images {
+    background: yellowgreen;
+    flex: 0 0 80%;
+    min-height: 70vh;
+}
