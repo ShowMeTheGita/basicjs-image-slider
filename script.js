@@ -1,9 +1,32 @@
+window.onload = populateWithFirstImage;
+
 const prevBtn = document.querySelector('.prevBtn');
-const container = document.querySelector('.images')
+const nextBtn = document.querySelector('.nextBtn');
+const container = document.querySelector('.images');
+var currentImage = 1;
+
 
 prevBtn.addEventListener('click', function() {
-    container.style.backgroundImage = "url(https://i.picsum.photos/id/866/536/354.jpg?hmac=tGofDTV7tl2rprappPzKFiZ9vDh5MKj39oa2D--gqhA)";
-})
+    
+    if (currentImage !== 1) {
+        currentImage--;
+        container.style.backgroundImage = "url(https://picsum.photos/id/" + currentImage + "/1000";
+    }
+
+});
 
 
+nextBtn.addEventListener('click', function () {
+    currentImage++;
+    container.style.backgroundImage = "url(https://picsum.photos/id/" + currentImage + "/1000";
+
+});
+
+
+
+
+function populateWithFirstImage() {
+    let url = "url(https://picsum.photos/id/" + currentImage + "/700)";    
+    container.style.backgroundImage = url;
+}
 
